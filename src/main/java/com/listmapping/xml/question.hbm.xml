@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping> 
+    
+     
+ <class name="com.listmapping.xml.Question1" table="question1">  
+   <id name="qid">  
+     <generator class="native"></generator>  
+   </id>  
+   <property name="qName"></property>  
+            
+   <list name="answers" table="answers1">  
+     <key column="qqid"></key>  
+     <index column="type"></index>  
+     <element column="answer" type="string"></element>  
+   </list>  
+            
+ </class>  
+            
+</hibernate-mapping>  
+    
